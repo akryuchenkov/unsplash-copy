@@ -1,0 +1,26 @@
+<div [class.focus]="isFocus"  class="search">
+
+  <form [class.focus]="isFocus" >
+    <div class="search_1">
+      <button type="submit">
+        <svg width="32" height="32" version="1.1" viewBox="0 0 32 32" aria-hidden="false">
+          <path
+            d="M31 28.64l-7.57-7.57a12.53 12.53 0 1 0-2.36 2.36l7.57 7.57zm-17.5-6a9.17 9.17 0 1 1 6.5-2.64 9.11 9.11 0 0 1-6.5 2.67z"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="search_2">
+      <input (input)="onChangeInput($event)"
+             [value]="value"
+             (focusin)="onFocusIn()"
+             (focusout)="onFocusOut()"
+             autocomplete="off"
+             aria-autocomplete="list" aria-controls="react-autowhatever-SEARCH_FORM_INPUT_nav-bar"
+             class="search_2" placeholder="Search free high-resolution photos"
+             autocapitalize="none" spellcheck="false"
+             name="searchKeyword" placeholder="Search free high-resolution photos"
+             required="" data-test="nav-bar-search-form-input"
+             title="Search Unsplash" [value]="value">
+    </div>
+  </form>
+</div>

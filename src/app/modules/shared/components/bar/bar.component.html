@@ -1,0 +1,21 @@
+<div class="nav">
+  <div class="first">
+    <a src="#">
+      Editorial
+    </a>
+  </div>
+  <div class="stick"></div>
+  <div *ngFor="let menu of list" class="navbar">
+
+    <div class="items">
+      <a src="#">
+        {{ menu.text }}
+      </a>
+    </div>
+  </div>
+  <div class="last">
+    <a src="#">
+      View all
+    </a>
+  </div>
+</div>
