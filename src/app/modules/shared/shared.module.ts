@@ -4,10 +4,11 @@ import {MenuComponent} from './components/menu/menu.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import {FormsModule} from '@angular/forms';
 import { BarComponent } from './components/bar/bar.component';
+import { LoComponent } from './components/login/lo.component';
 
 
 @NgModule({
-  declarations: [MenuComponent, SearchInputComponent, BarComponent],
+  declarations: [MenuComponent, SearchInputComponent, BarComponent, LoComponent],
     imports: [
         CommonModule,
         FormsModule
