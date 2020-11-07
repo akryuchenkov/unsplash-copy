@@ -19,7 +19,8 @@ a:focus{
 }
 .items a{
   padding-top: 16px;
-  padding-left:32px;
+  padding-left:20px;
+  padding-right: 12px;
 }
 .items{
   display: flex;

@@ -29,7 +29,13 @@
 }
 
 
-
+.top-right{
+  justify-content: right;
+  align-items: center;
+  display: inline-block;
+  height: 32px;
+  float: right;
+}
 
 
 

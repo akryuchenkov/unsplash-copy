@@ -14,6 +14,6 @@ import { LoComponent } from './components/login/lo.component';
     LoComponent,
   ],
   imports: [CommonModule, FormsModule],
-  exports: [MenuComponent, SearchInputComponent],
+  exports: [MenuComponent, SearchInputComponent, BarComponent, LoComponent],
 })
 export class SharedModule {}

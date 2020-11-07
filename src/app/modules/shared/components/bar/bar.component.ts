@@ -17,7 +17,6 @@ export class BarComponent implements OnInit {
     {text: 'Nature'},
     {text: 'People'},
     {text: 'Street Photography'}
-
   ];
   first = this.list[0];
   last = this.list[this.list.length];

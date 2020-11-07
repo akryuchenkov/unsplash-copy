@@ -1,0 +1,74 @@
+.top-right{
+  align-items: center;
+  display: inline;
+  height: 32px;
+  float: right;
+  padding: 0 11px;
+}
+.right{
+  float:right;
+}
+.button-1{
+  margin-right: 14px;
+  display: inline-block;
+  border: 1px solid transparent;
+  transition: all .1s ease-in-out;
+  text-align: center;
+  user-select: none;
+  fill: currentColor;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  color: #767676;
+  background-color: #fff;
+}
+.button-1:hover{
+  border: 1px solid transparent;
+
+}
+.green-but{
+  color: #fff;
+  background-color: #3cb46e;
+
+  height: 32px;
+  padding: 0 11px;
+  font-size: 14px;
+  line-height: 30px;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  transition: all .1s ease-in-out;
+  text-align: center;
+  user-select: none;
+  fill: currentColor;
+}
+button{
+  color: #767676;
+  background-color: #fff;
+
+  height: 32px;
+  padding: 0 11px;
+  font-size: 14px;
+  line-height: 30px;
+  display: inline-block;
+
+  border-radius: 4px;
+  border: 1px solid #d1d1d1;;
+  transition: all .1s ease-in-out;
+  text-align: center;
+  user-select: none;
+  fill: currentColor;
+
+
+}
+button:hover{
+  border-color: #111111;
+  color: #111;
+}
+.over-but, .over-log{
+  margin-right: 48px;
+  float:left;
+  display: inline-block;
+}
+
