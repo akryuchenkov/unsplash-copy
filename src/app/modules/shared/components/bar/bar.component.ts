@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UnsplashService} from '../../unsplash.service';
+
 
 @Component({
   selector: 'app-bar',
@@ -6,21 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bar.component.css']
 })
 export class BarComponent implements OnInit {
-  list = [
-    {text: 'Architecture'},
-    {text: 'Current Events'},
-    {text: 'Experimental'},
-    {text: 'Fashion'},
-    {text: 'Film'},
-    {text: 'Health & Wellness'},
-    {text: 'Interiors'},
-    {text: 'Nature'},
-    {text: 'People'},
-    {text: 'Street Photography'}
-  ];
-  first = this.list[0];
-  last = this.list[this.list.length];
-  constructor() { }
+  topics = [];
+
+  constructor(private unsplashService: UnsplashService) {
+    this.unsplashService.getTopics().subscribe(topics => {
+      console.log(topics);
+      this.topics = topics;
+    });
+  }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,35 @@
+.img{
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+}
+.search{
+  display: inline-block;
+  float: left;
+
+  width: 60%;
+}
+img{
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,.1);
+}
+.top {
+  margin-top: 15px;
+  height: 62px;
+  padding-left: 3px;
+  padding-right: 10px;
+}
+.lit_user{
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  float: right;
+}
+.big_user{
+  height: 150px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  margin:100px auto;
+}

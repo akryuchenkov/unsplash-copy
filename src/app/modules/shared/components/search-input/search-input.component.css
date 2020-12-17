@@ -55,7 +55,7 @@ form{
 input{
   font-family: Helvetica;
   flex-grow: 1;
-  width: 375%;
+  width:960px;
   padding-bottom: 1px;
   padding-left: 12px;
   font-size: 14px;

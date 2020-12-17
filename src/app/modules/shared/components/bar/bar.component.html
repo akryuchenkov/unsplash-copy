@@ -4,14 +4,16 @@
       Editorial
     </a>
   </div>
+  <div class="items"><a href="#">Following</a></div>
   <div class="stick"></div>
-  <div *ngFor="let menu of list" class="navbar">
+  <div *ngFor="let topic of topics" class="navbar">
 
     <div class="items">
       <a src="#">
-        {{ menu.text }}
+        {{ topic.title }}
       </a>
     </div>
+
   </div>
   <div class="last">
     <a src="#">
@@ -19,3 +21,4 @@
     </a>
   </div>
 </div>
+

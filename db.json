@@ -1,0 +1,28 @@
+{
+  "categories": [
+    { "id": 1,  "title": "Following" },
+    { "id": 2,  "title": "Wallpapers" },
+    { "id": 3,  "title": "Nature" },
+    { "id": 4,  "title": "People" },
+    { "id": 5,  "title": "Architecture" },
+    { "id": 6,  "title": "Current events" },
+    { "id": 7,  "title": "Experimental" },
+    { "id": 8,  "title": "Fashion" },
+    { "id": 9,  "title": "Health & Wellness" },
+    { "id": 10,  "title": "Interiors" },
+    { "id": 11,  "title": "Street Photography" },
+    { "id": 12,  "title": "Technology" },
+    { "id": 13,  "title": "Travel" },
+    { "id": 14,  "title": "Textures & Patterns" },
+    { "id": 15,  "title": "Business & Work" },
+    { "id": 16,  "title": "Animals" },
+    { "id": 17,  "title": "Food & Drink" },
+    { "id": 18,  "title": "Athletics" },
+    { "id": 19,  "title": "Spirituality" },
+    { "id": 20,  "title": "Arts & Culture" },
+    { "id": 21,  "title": "History" }
+  ],
+  "photos": [
+    {"id": 1, "title": "Travel", "category" : 3}
+  ]
+}

@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { SystemLayoutComponent } from './layouts/system-layout/system-layout.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {SystemLayoutComponent} from './layouts/system-layout/system-layout.component';
+import {HomePageComponent} from './pages/home-page/home-page.component';
+import {PageComponent} from './pages/page/page.component';
+import {UserPageComponent} from './pages/user-page/user-page.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,31 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'test',
+    component: SystemLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: PageComponent,
+      },
+    ],
+  },
+  {
+    path: 'user',
+    component: SystemLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: UserPageComponent,
+      },
+    ],
+  },
+  {
+    path : '**',
+    component: HomePageComponent,
+  }
+
 ];
 
 @NgModule({

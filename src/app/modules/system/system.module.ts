@@ -1,12 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SystemRoutingModule } from './system-routing.module';
-import { SystemLayoutComponent } from './layouts/system-layout/system-layout.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import { SharedModule } from '../shared/shared.module';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {SystemRoutingModule} from './system-routing.module';
+import {SystemLayoutComponent} from './layouts/system-layout/system-layout.component';
+import {HomePageComponent} from './pages/home-page/home-page.component';
+import {SharedModule} from '../shared/shared.module';
+import {PageComponent} from './pages/page/page.component';
+import {UserPageComponent} from './pages/user-page/user-page.component';
+import {UnsplashService} from '../shared/unsplash.service';
 
 @NgModule({
-  declarations: [SystemLayoutComponent, HomePageComponent],
+  declarations: [SystemLayoutComponent, HomePageComponent, PageComponent, UserPageComponent],
   imports: [CommonModule, SystemRoutingModule, SharedModule],
+  exports: [
+    HomePageComponent,
+    PageComponent,
+    UserPageComponent
+  ],
+  providers: [UnsplashService]
 })
-export class SystemModule {}
+export class SystemModule {
+}

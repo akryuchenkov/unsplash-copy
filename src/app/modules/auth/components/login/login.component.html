@@ -1,3 +1,61 @@
-<div>
-  <input type=text>
-</div>
+<div class="container">
+  <div class="vertical-wrapper">
+    <div class="vertical-cell">
+      <div class="row">
+        <div class="cent">
+          <div class="text-center">
+            <a href="/" title="Home &mdash; Unsplash">
+              <img class="login__logo"
+                   src="https://unsplash.com/assets/core/logo-black-df2168ed0c378fa5506b1816e75eb379d06cfcd0af01e07a2eb813ae9b5d7405.svg"/>
+            </a>
+            <h1 class="login__title">Login</h1>
+            <p class="login__subtitle">Welcome back.</p>
+          </div> <!-- close .text-center -->
+
+
+          <div class="form-group">
+            <form accept-charset="UTF-8" action="/login" method="post"><input name="utf8" type="hidden"
+                                                                              value="&#x2713;"/><input
+              name="authenticity_token" type="hidden"
+              value="O763/u97OHCtnqnp7DOpObPRNqpkxKYM6Du6cXq7xoRmG6C9TEOTZLwmZubl0dU1Ndrn577xswDd7R3UW0kouQ=="/>
+
+              <div class="form-group">
+                <label for="user_email">Email</label>
+                <input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" tabindex="1"
+                       type="email"
+                       value=""/>
+              </div> <!-- close .form-group -->
+
+              <div class="form-group">
+                <div class="label-justify">
+                  <label for="user_password">
+                    Password
+                  </label> <span><a href="/users/password/new" tabindex="4">Forgot your password?</a></span>
+                </div>
+
+                <input autocomplete="off" class="form-control" id="user_password" name="user[password]" tabindex="2"
+                       type="password"/>
+              </div> <!-- close .form-group -->
+
+              <input class="js-after-authorization-action" id="after_authorization_action"
+                     name="after_authorization_action"
+                     type="hidden"/>
+              <input class="js-after-authorization-object-id" id="after_authorization_object_id"
+                     name="after_authorization_object_id"
+                     type="hidden"/>
+
+              <div class="form-group">
+                <input class="btn btn-default btn-block-level" data-disable-with="···" name="commit" tabindex="3"
+                       type="submit"
+                       value="Login"/>
+              </div> <!-- close .form-group -->
+            </form>
+            <div class="login__alt-cta text-center">
+              Don't have an account? <a href="/join">Join</a>
+            </div> <!-- close .text-center -->
+
+          </div> <!-- close .col -->
+        </div> <!-- close .row -->
+      </div> <!-- close .vertical-cell -->
+    </div> <!-- close .vertical-wrapper -->
+  </div> <!-- close .container -->
