@@ -132,3 +132,11 @@ input{
   font-size: 100%;
   margin: 0;
 }
+button,input:focus{
+  box-shadow: none;
+  border:none;
+}
+button,input:hover{
+  box-shadow: none;
+  border:none;
+}

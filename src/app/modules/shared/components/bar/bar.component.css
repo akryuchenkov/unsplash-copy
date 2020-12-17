@@ -14,9 +14,7 @@ a{
 
   top:50%
 }
-a:focus{
-  border-bottom: 1px solid black;
-}
+
 .items a{
   padding-top: 16px;
   padding-left:20px;
