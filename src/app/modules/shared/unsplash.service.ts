@@ -18,6 +18,10 @@ function getUnsplashAuthConfig() {
 export class UnsplashService {
   constructor(private httpClient: HttpClient) {}
 
+  get accessKey() {
+    return accessKey;
+  }
+
   getTopics(): Observable<any[]> {
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/topics`,
