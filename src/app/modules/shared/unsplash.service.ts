@@ -2,10 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
-let accessKey: string;
-accessKey = 'KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg';
+const accessKey = 'KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg';
 
-// tslint:disable-next-line:typedef
 function getUnsplashAuthConfig() {
   return {
     headers: {
