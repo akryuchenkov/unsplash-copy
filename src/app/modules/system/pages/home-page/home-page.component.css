@@ -1,34 +1,38 @@
 ._container__main{
   background-color: #111;
+  height:594px;  color: #fff;
 
-  color: #fff;
 }
 ._container__main:hover{
   color: #fff;
 }
 ._container{
   position: relative;
+
 }
 ._container__pic{
   display: block;
   position: absolute;
   top: 0;
-  left: 0;
 
+  margin-left: -1px;
+  height:594px;
 }
 ._pic{
-  display: block;
-  height: 100%;
+
+  height:594px;  display: block;
+
   position: relative;
 }
 img{
+
   object-fit:cover;
   width: 100%;
   height: 100%;
   resize: vertical;
   vertical-align: middle;
   border-style: none;
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 ._container__text{
@@ -135,8 +139,10 @@ input{
 button,input:focus{
   box-shadow: none;
   border:none;
+  outline: none;
 }
 button,input:hover{
   box-shadow: none;
   border:none;
+  outline: none;
 }

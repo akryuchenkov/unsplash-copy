@@ -1,11 +1,17 @@
+
 <div class="registrations__wrapper">
   <div class="registrations__container">
-    <div class="registrations__left-panel"
-         style="background-image: url(https://images.unsplash.com/4/feet.JPG?);">
+
+    <div class="registrations__left-panel">
+
       <div class="registrations__content">
+
+
         <div>
+          <a href="#">
           <img class="registrations__logo"
                src="https://unsplash.com/assets/core/logo-white-8962708214629a3e8f9fbf5b87b70c3ace41c4175cbcc267f7fbb8449ac45bdd.svg"/>
+          </a>
         </div>
 
         <div>
@@ -14,44 +20,38 @@
             else</h2>
         </div>
       </div> <!-- .content -->
-    </div> <!-- close .left-panel -->
+      <div class="_black">
+      </div>
+    </div><!-- close .left-panel -->
 
     <div class="registrations__right-panel">
       <div class="registrations__spacer"></div>
       <div class="login-form qa-primary-join-form">
         <div class="row">
           <div class="col-xs-12">
-            <div class="text-center sheet--padding-bottom">
+            <div class="text-center">
 
-              <h4 class="alpha text-weight--bold">Join Unsplash</h4>
+              <h4>Join Unsplash</h4>
 
               <p>Already have an account? <a href="/login" rel="nofollow">Login</a></p>
             </div>
             <div class="form">
-              <form accept-charset="UTF-8" action="/join"
-                    class="new_#&lt;User:0x00007efdead07e80&gt;" id="new_#&lt;User:0x00007efdead07e80&gt;"
-                    method="post"><input name="utf8" type="hidden"
-                                         value="&#x2713;"/><input name="authenticity_token"
-                                                                  type="hidden"
-                                                                  value="TvHZWzGhmazwE+OUhKY6y2K9It8yn/nny3pInd+pROcTVM4YkpkyuOGrLJuNREbH5Lbzkuiq7Ov+rO84/luq2g=="/>
-                <div class="row">
-                  <div class="col-xs-6">
+              <div class="_col">
+              <form
+                method="post">
+                <input name="utf8" type="hidden" value="&#x2713;"/>
+                <input name="authenticity_token" type="hidden" value="TvHZWzGhmazwE+OUhKY6y2K9It8yn/nny3pInd+pROcTVM4YkpkyuOGrLJuNREbH5Lbzkuiq7Ov+rO84/luq2g=="/>
                     <div class="form-group">
                       <label for="user_first_name">First name</label>
-                      <input autofocus="autofocus" class="form-control js-validate-field-on-blur" id="user_first_name"
-                             name="user[first_name]" required="required" type="text"/>
-
+                      <input name="user[first_name]" required="required" type="text"/>
                     </div> <!-- close .form-group -->
-                  </div> <!-- close .col -->
-
-                  <div class="col-xs-6">
                     <div class="form-group">
                       <label for="user_last_name">Last name</label>
-                      <input class="form-control" id="user_last_name" name="user[last_name]" type="text"/>
+                      <input  id="user_last_name" name="user[last_name]" type="text"/>
 
                     </div> <!-- close .form-group -->
-                  </div> <!-- close .col -->
-                </div> <!-- close .row -->
+
+
 
                 <div class="form-group">
                   <label for="user_email">
@@ -90,27 +90,8 @@
                        type="hidden"/>
 
                 <div class="form-group">
-                  <a class="btn btn-default btn-block-level js-fake-join-form-submit-button" href="#">Join</a>
-                  <script async defer src="https://www.google.com/recaptcha/api.js"></script>
-                  <script>
-                    var invisibleRecaptchaSubmit = function () {
-                      var closestForm = function (ele) {
-                        var curEle = ele.parentNode;
-                        while (curEle.nodeName !== 'FORM' && curEle.nodeName !== 'BODY') {
-                          curEle = curEle.parentNode;
-                        }
-                        return curEle.nodeName === 'FORM' ? curEle : null
-                      };
 
-                      var eles = document.getElementsByClassName('g-recaptcha');
-                      if (eles.length > 0) {
-                        var form = closestForm(eles[0]);
-                        if (form) {
-                          form.submit();
-                        }
-                      }
-                    };
-                  </script>
+                  <script async defer src="https://www.google.com/recaptcha/api.js"></script>
                   <button class="g-recaptcha hide js-join-form-submit-button" data-callback="invisibleRecaptchaSubmit"
                           data-sitekey="6Lf3Om8UAAAAADFWLvq5hvCv2gGk-QQ2E441cMZ0" type="submit">
                     Join
@@ -118,12 +99,9 @@
 
                 </div> <!-- close .form-group -->
 
-                <div class="form-group text-center">
-                  <p class="text-secondary zeta">By joining, you agree to the <a href="/terms">Terms</a> and <a
-                    href="/privacy">Privacy Policy</a>.</p>
-                </div>
 
               </form>
+              </div>
             </div> <!-- close .form -->
           </div> <!-- close .col -->
         </div> <!-- close .row -->

@@ -4,6 +4,8 @@ import {SystemLayoutComponent} from './layouts/system-layout/system-layout.compo
 import {HomePageComponent} from './pages/home-page/home-page.component';
 import {PageComponent} from './pages/page/page.component';
 import {UserPageComponent} from './pages/user-page/user-page.component';
+import {LoginComponent} from '../auth/components/login/login.component';
+import {RegisterComponent} from '../auth/components/register/register.component';
 
 const routes: Routes = [
   {
@@ -33,6 +35,26 @@ const routes: Routes = [
       {
         path: '',
         component: UserPageComponent,
+      },
+    ],
+  },
+  {
+    path: 'login',
+    component: SystemLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: LoginComponent,
+      },
+    ],
+  },
+  {
+    path: 'join',
+    component: SystemLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: RegisterComponent,
       },
     ],
   },

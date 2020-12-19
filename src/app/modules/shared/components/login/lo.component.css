@@ -1,12 +1,14 @@
 .top-right{
   align-items: center;
-  display: inline;
+  display: inline-block;
   height: 32px;
   float: right;
   padding: 0 11px;
+  width:660px;
 }
 .right{
   float:right;
+  margin-right: -40px;
 }
 .button-1{
   margin-right: 14px;
@@ -71,6 +73,5 @@ button:hover{
   float:left;
   display: inline-block;
 }
-.top-right{
-  float: right;
-}
+
+

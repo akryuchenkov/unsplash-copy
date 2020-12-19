@@ -14,14 +14,13 @@
 
 
           <div class="form-group">
-            <form accept-charset="UTF-8" action="/login" method="post"><input name="utf8" type="hidden"
-                                                                              value="&#x2713;"/><input
-              name="authenticity_token" type="hidden"
-              value="O763/u97OHCtnqnp7DOpObPRNqpkxKYM6Du6cXq7xoRmG6C9TEOTZLwmZubl0dU1Ndrn577xswDd7R3UW0kouQ=="/>
+            <form accept-charset="UTF-8" action="/login" method="post">
+              <input class="in" name="utf8" type="hidden" value="&#x2713;"/><input
+              name="authenticity_token" type="hidden"/>
 
               <div class="form-group">
                 <label for="user_email">Email</label>
-                <input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" tabindex="1"
+                <input class ="in" autofocus="autofocus" id="user_email" name="user[email]" tabindex="1"
                        type="email"
                        value=""/>
               </div> <!-- close .form-group -->
@@ -30,24 +29,24 @@
                 <div class="label-justify">
                   <label for="user_password">
                     Password
-                  </label> <span><a href="/users/password/new" tabindex="4">Forgot your password?</a></span>
+                  </label> <span class="forgot"><a href="/users/password/new" tabindex="4">Forgot your password?</a></span>
                 </div>
 
-                <input autocomplete="off" class="form-control" id="user_password" name="user[password]" tabindex="2"
+                <input autocomplete="off" class ="in"  id="user_password" name="user[password]" tabindex="2"
                        type="password"/>
               </div> <!-- close .form-group -->
 
-              <input class="js-after-authorization-action" id="after_authorization_action"
+              <input class ="in"  id="after_authorization_action"
                      name="after_authorization_action"
                      type="hidden"/>
-              <input class="js-after-authorization-object-id" id="after_authorization_object_id"
+              <input class ="in"  id="after_authorization_object_id"
                      name="after_authorization_object_id"
                      type="hidden"/>
 
               <div class="form-group">
-                <input class="btn btn-default btn-block-level" data-disable-with="···" name="commit" tabindex="3"
+                <button data-disable-with="···" name="commit" tabindex="3"
                        type="submit"
-                       value="Login"/>
+                       value="Login">Login</button>
               </div> <!-- close .form-group -->
             </form>
             <div class="login__alt-cta text-center">

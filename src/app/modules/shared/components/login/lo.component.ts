@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import {SubmitComponent} from '../submit/submit.component';
 
 @Component({
   selector: 'app-lo',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
+
+  // tslint:disable-next-line:typedef
+  openDialog() {
+    this.dialog.open(SubmitComponent);
+  }
 
   ngOnInit(): void {
   }

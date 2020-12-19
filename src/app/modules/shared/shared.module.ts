@@ -6,6 +6,9 @@ import {FormsModule} from '@angular/forms';
 import {BarComponent} from './components/bar/bar.component';
 import {LoComponent} from './components/login/lo.component';
 import {UnsplashService} from './unsplash.service';
+import { SubmitComponent } from './components/submit/submit.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -13,8 +16,9 @@ import {UnsplashService} from './unsplash.service';
     SearchInputComponent,
     BarComponent,
     LoComponent,
+    SubmitComponent,
   ],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MatButtonModule, MatDialogModule],
   exports: [MenuComponent, SearchInputComponent, BarComponent, LoComponent],
   providers: [UnsplashService]
 })
