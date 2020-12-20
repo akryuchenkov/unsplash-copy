@@ -15,7 +15,9 @@ export class LoComponent implements OnInit {
   openDialog() {
     this.dialog.open(SubmitComponent);
   }
+  toAuth(){
 
+  }
   ngOnInit(): void {
   }
 

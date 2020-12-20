@@ -1,5 +1,6 @@
 .navbar {
-  display: flex;
+  display: inline-block;
+  float: left;
   align-items: center;
   height: 56px;
   line-height: 1.6;
@@ -25,11 +26,9 @@ a{
 
   text-align: center;
 }
-.navbar{
-  display: inline;
-  float: left;
-}
+
 .stick{
+  margin-left: 4px;
   margin-top: 12px;
   display: inline;
   float: left;
@@ -48,7 +47,7 @@ a{
 }
 .last{
   padding-top: 14px;
-  float:right;
+ margin-left: 720px;
   padding-right: 20px;
 }
 
@@ -56,6 +55,7 @@ a{
   height:56px ;
   position: sticky;
   z-index: 1;
+  display: flex;
 }
 
 

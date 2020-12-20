@@ -7,8 +7,9 @@ import {BarComponent} from './components/bar/bar.component';
 import {LoComponent} from './components/login/lo.component';
 import {UnsplashService} from './unsplash.service';
 import { SubmitComponent } from './components/submit/submit.component';
-import {MatButtonModule} from "@angular/material/button";
-import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import {MatDialogModule} from "@angular/material/dialog";
     BarComponent,
     LoComponent,
     SubmitComponent,
+    GalleryComponent,
   ],
   imports: [CommonModule, FormsModule, MatButtonModule, MatDialogModule],
-  exports: [MenuComponent, SearchInputComponent, BarComponent, LoComponent],
+  exports: [MenuComponent, SearchInputComponent, BarComponent, LoComponent, GalleryComponent],
   providers: [UnsplashService]
 })
 export class SharedModule {}

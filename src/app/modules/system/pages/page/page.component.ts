@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {UnsplashService} from '../../../shared/unsplash.service';
 import {Routes} from "@angular/router";
-import {AuthComponent} from "../../../auth/components/auth/auth.component";
-import {LoginComponent} from "../../../auth/components/login/login.component";
-import {RegisterComponent} from "../../../auth/components/register/register.component";
+import {AuthComponent} from '../../../auth/components/auth/auth.component';
+import {LoginComponent} from '../../../auth/components/login/login.component';
+import {RegisterComponent} from '../../../auth/components/register/register.component';
 
 const routes: Routes = [
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
 export class PageComponent implements OnInit {
 
 
-  constructor() {
+  constructor(private unsplashService: UnsplashService) {
 
   }
 

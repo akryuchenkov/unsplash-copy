@@ -1,7 +1,7 @@
 ._container__main{
   background-color: #111;
   height:594px;  color: #fff;
-
+margin-right: -10px;
 }
 ._container__main:hover{
   color: #fff;
