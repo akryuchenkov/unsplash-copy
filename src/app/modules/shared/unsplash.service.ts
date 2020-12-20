@@ -1,16 +1,16 @@
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {Injectable} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
-
-const accessKey = 'KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg';
+let accessKey: string;
+accessKey = 'KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg';
 
 // tslint:disable-next-line:typedef
 function getUnsplashAuthConfig() {
   return {
     headers: {
       Authorization: `Client-ID ${accessKey}`,
-    }
+    },
   };
 }
 
@@ -18,19 +18,19 @@ function getUnsplashAuthConfig() {
   providedIn: 'root',
 })
 export class UnsplashService {
-  constructor(private httpClient: HttpClient) {
-  }
+  constructor(private httpClient: HttpClient) {}
 
   getTopics(): Observable<any[]> {
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/topics`,
-      getUnsplashAuthConfig(),
-  );
+      getUnsplashAuthConfig()
+    );
   }
 
   getPhotosByTopic(topicName: string): Observable<any[]> {
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/topics/${topicName}`,
+      getUnsplashAuthConfig()
     );
   }
 
@@ -42,15 +42,6 @@ export class UnsplashService {
   }
 
   getRandomPhoto(): Observable<any[]> {
-    return this.httpClient.get<any[]>(
-      `https://api.unsplash.com/photos/random`,
-      getUnsplashAuthConfig()
-    );
-  }
-  getListPhotos(): Observable<any[]>{
-    return this.httpClient.get<any[]>(
-      `https://api.unsplash.com/photos?per_page=30`,
-      getUnsplashAuthConfig()
-    );
+    return this.httpClient.get<any[]>(`https://api.unsplash.com/random/photos`);
   }
 }
