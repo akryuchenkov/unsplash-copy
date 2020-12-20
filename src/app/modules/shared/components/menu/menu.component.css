@@ -9,14 +9,16 @@
 
 .text {
   margin-left: 12px;
+
   font-size: 15px;
-  margin-top: -2px;
+  margin-top: -5px;
 }
 
 .title_1 {
   color: #111;
   font-weight: 700;
   line-height: 1;
+
 }
 
 .title_2 {
@@ -24,6 +26,8 @@
   font-size: 13px;
   margin-top: -3px;
   display: block;
+  width: max-content;
+
 }
 
 .top-right {

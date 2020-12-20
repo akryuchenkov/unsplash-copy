@@ -1,8 +1,16 @@
+.home {
+  width: 1938px;
+  margin-left: -8px;
+  margin-right: -40px;
+}
 ._container__main {
   background-color: #111;
   height: 594px;
   color: #fff;
-  margin-right: -10px;
+
+  overflow: hidden;
+  display: block;
+  right: 0;
 }
 ._container__main:hover {
   color: #fff;
@@ -14,6 +22,7 @@
   display: block;
   position: absolute;
   top: 0;
+  width: 100%;
 
   margin-left: -1px;
   height: 594px;
@@ -21,8 +30,6 @@
 ._pic {
   height: 594px;
   display: block;
-
-  position: relative;
 }
 img {
   object-fit: cover;
