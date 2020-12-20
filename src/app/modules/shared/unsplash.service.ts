@@ -42,6 +42,10 @@ export class UnsplashService {
   }
 
   getRandomPhoto(): Observable<any[]> {
-    return this.httpClient.get<any[]>(`https://api.unsplash.com/random/photos`);
+    return this.httpClient.get<any[]>(`https://api.unsplash.com/photos/random`);
   }
+  getListPhotos(): Observable<any[]> {
+    return this.httpClient.get<any[]>(`https://api.unsplash.com/photos?per_page=30`,
+      getUnsplashAuthConfig());
+}
 }
