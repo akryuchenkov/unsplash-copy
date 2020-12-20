@@ -1,6 +1,6 @@
 <div class="nav">
   <div class="first">
-    <a src="#">
+    <a href="#">
       Editorial
     </a>
   </div>
@@ -8,16 +8,12 @@
   <div *ngFor="let topic of topics" class="navbar">
 
     <div class="items">
-      <a src="#">
+      <a (click)="toTopic()" href="/{{topic.id}}">
         {{ topic.title }}
       </a>
     </div>
 
   </div>
-  <div class="last">
-    <a src="#">
-      View all
-    </a>
-  </div>
+
 </div>
 

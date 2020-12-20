@@ -19,7 +19,7 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'test',
+    path: '{{topic.id}}',
     component: SystemLayoutComponent,
     children: [
       {
