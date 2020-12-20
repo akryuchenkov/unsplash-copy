@@ -26,7 +26,6 @@ export class UnsplashService {
       getUnsplashAuthConfig()
     );
   }
-
   getPhotosByTopic(topicName: string): Observable<any[]> {
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/topics/${topicName}/photos?per_page=30`,
@@ -48,8 +47,8 @@ export class UnsplashService {
     return this.httpClient.get<any[]>(`https://api.unsplash.com/photos?per_page=30`,
       getUnsplashAuthConfig());
   }
-  getTopic(topicName: string): Observable<any[]> {
-  return this.httpClient.get<any[]>(`https://api.unsplash.com/topics/:${topicName}`,
+  getTopicBySlug(topicName: string): Observable<any[]> {
+  return this.httpClient.get<any[]>(`https://api.unsplash.com/topics/${topicName}`,
     getUnsplashAuthConfig());
   }
   toLogin(): Observable<any>{

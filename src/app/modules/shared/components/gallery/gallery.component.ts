@@ -19,9 +19,7 @@ export class GalleryComponent implements OnInit {
         this.pictures = pictures;
       });
     } else {
-      this.unsplashService
-        .getPhotosByTopic(this.topic)
-        .subscribe((pictures) => {
+      this.unsplashService.getPhotosByTopic(this.topic).subscribe((pictures) => {
           this.pictures = pictures;
         });
     }

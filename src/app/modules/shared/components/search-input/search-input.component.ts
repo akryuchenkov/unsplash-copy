@@ -16,7 +16,7 @@ export class SearchInputComponent implements OnInit {
   }
 
   onChangeInput(e): void {
-    this.value += e.target.value;
+    ///this.value += e.target.value;
     this.update.emit(this.value);
   }
 
