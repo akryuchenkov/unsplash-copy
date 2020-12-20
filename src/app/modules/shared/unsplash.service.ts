@@ -29,7 +29,7 @@ export class UnsplashService {
 
   getPhotosByTopic(topicName: string): Observable<any[]> {
     return this.httpClient.get<any[]>(
-      `https://api.unsplash.com/topics/${topicName}`,
+      `https://api.unsplash.com/topics/${topicName}/photos?per_page=30`,
       getUnsplashAuthConfig()
     );
   }
@@ -47,5 +47,13 @@ export class UnsplashService {
   getListPhotos(): Observable<any[]> {
     return this.httpClient.get<any[]>(`https://api.unsplash.com/photos?per_page=30`,
       getUnsplashAuthConfig());
-}
+  }
+  getTopic(topicName: string): Observable<any[]> {
+  return this.httpClient.get<any[]>(`https://api.unsplash.com/topics/:${topicName}`,
+    getUnsplashAuthConfig());
+  }
+  toLogin(): Observable<any>{
+    return this.httpClient.post(`https://unsplash.com/oauth/authorize?client_id=${accessKey}`,
+      getUnsplashAuthConfig());
+  }
 }

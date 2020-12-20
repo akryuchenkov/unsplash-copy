@@ -9,13 +9,13 @@ import {UnsplashService} from '../../unsplash.service';
 })
 export class BarComponent implements OnInit {
   topics = [];
-
   constructor(private unsplashService: UnsplashService) {
     this.unsplashService.getTopics().subscribe(topics => {
       console.log(topics);
       this.topics = topics;
     });
   }
+
 
   ngOnInit(): void {
   }
