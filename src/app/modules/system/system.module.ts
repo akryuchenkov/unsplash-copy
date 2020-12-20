@@ -7,9 +7,10 @@ import {SharedModule} from '../shared/shared.module';
 import {PageComponent} from './pages/page/page.component';
 import {UserPageComponent} from './pages/user-page/user-page.component';
 import {UnsplashService} from '../shared/unsplash.service';
+import { SearchGalleryComponent } from './pages/search-gallery/search-gallery.component';
 
 @NgModule({
-  declarations: [SystemLayoutComponent, HomePageComponent, PageComponent, UserPageComponent],
+  declarations: [SystemLayoutComponent, HomePageComponent, PageComponent, UserPageComponent, SearchGalleryComponent],
   imports: [CommonModule, SystemRoutingModule, SharedModule],
   exports: [
     HomePageComponent,
