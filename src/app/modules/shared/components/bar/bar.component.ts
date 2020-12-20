@@ -1,23 +1,30 @@
-import {Component, OnInit} from '@angular/core';
-import {UnsplashService} from '../../unsplash.service';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UnsplashService } from '../../unsplash.service';
 
 @Component({
   selector: 'app-bar',
   templateUrl: './bar.component.html',
-  styleUrls: ['./bar.component.css']
+  styleUrls: ['./bar.component.css'],
 })
 export class BarComponent implements OnInit {
   topics = [];
-  constructor(private unsplashService: UnsplashService) {
-    this.unsplashService.getTopics().subscribe(topics => {
-      console.log(topics);
+  constructor(
+    private unsplashService: UnsplashService,
+    private router: Router
+  ) {
+    this.unsplashService.getTopics().subscribe((topics) => {
       this.topics = topics;
     });
   }
 
-
-  ngOnInit(): void {
+  isActiveTopic(): boolean {
+    return false;
   }
 
+  toTopic(slug: string): void {
+    this.router.navigate([`/${slug}`]);
+  }
+
+  ngOnInit(): void {}
 }

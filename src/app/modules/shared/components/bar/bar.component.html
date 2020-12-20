@@ -1,19 +1,13 @@
 <div class="nav">
   <div class="first">
-    <a href="#">
-      Editorial
-    </a>
+    <a routerLink="/"> Editorial </a>
   </div>
   <div class="stick"></div>
   <div *ngFor="let topic of topics" class="navbar">
-
-    <div class="items">
-      <a (click)="toTopic()" href="/{{topic.id}}">
+    <div class="items" (click)="toTopic(topic.slug)">
+      <a>
         {{ topic.title }}
       </a>
     </div>
-
   </div>
-
 </div>
-

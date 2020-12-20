@@ -1,3 +1,4 @@
+import { SimpleChanges } from '@angular/core';
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { UnsplashService } from '../../unsplash.service';
 
@@ -44,6 +45,15 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.pictures = [];
+    this.unsplashService
+      .getPhotosByTopic(changes.topic.currentValue)
+      .subscribe((pictures) => {
+        this.pictures = pictures;
+      });
   }
 }
 

@@ -1,11 +1,11 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {SystemLayoutComponent} from './layouts/system-layout/system-layout.component';
-import {HomePageComponent} from './pages/home-page/home-page.component';
-import {PageComponent} from './pages/page/page.component';
-import {UserPageComponent} from './pages/user-page/user-page.component';
-import {LoginComponent} from '../auth/components/login/login.component';
-import {RegisterComponent} from '../auth/components/register/register.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { SystemLayoutComponent } from './layouts/system-layout/system-layout.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { PageComponent } from './pages/page/page.component';
+import { UserPageComponent } from './pages/user-page/user-page.component';
+import { LoginComponent } from '../auth/components/login/login.component';
+import { RegisterComponent } from '../auth/components/register/register.component';
 
 const routes: Routes = [
   {
@@ -16,53 +16,28 @@ const routes: Routes = [
         path: '',
         component: HomePageComponent,
       },
-    ],
-  },
-  {
-    path: '{{topic.id}}',
-    component: SystemLayoutComponent,
-    children: [
       {
-        path: '',
+        path: ':topic',
         component: PageComponent,
       },
-    ],
-  },
-  {
-    path: 'user',
-    component: SystemLayoutComponent,
-    children: [
       {
-        path: '',
+        path: 'user',
         component: UserPageComponent,
       },
-    ],
-  },
-  {
-    path: 'login',
-    component: SystemLayoutComponent,
-    children: [
       {
-        path: '',
+        path: 'login',
         component: LoginComponent,
       },
-    ],
-  },
-  {
-    path: 'join',
-    component: SystemLayoutComponent,
-    children: [
       {
-        path: '',
+        path: 'join',
         component: RegisterComponent,
       },
     ],
   },
   {
-    path : '**',
+    path: '**',
     component: HomePageComponent,
-  }
-
+  },
 ];
 
 @NgModule({
