@@ -1,12 +1,8 @@
-@media (min-height: 277px) {
-  .col {
-    height: 277px;
-  }
-}
+
 .container {
+  margin:20px auto ;
   justify-content: center;
   width: 1320px;
-  margin-top: 20px;
   display: flex;
   flex-flow: row wrap;
   gap: 24px;
