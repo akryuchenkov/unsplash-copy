@@ -1,26 +1,25 @@
-@media(min-height: 277px){
-  .col-1{
+@media (min-height: 277px) {
+  .col {
     height: 277px;
   }
 }
-.container{
-  justify-content: space-between;
+.container {
+  justify-content: center;
   width: 1320px;
   margin-top: 20px;
-  background-color: yellowgreen;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  gap: 24px;
 }
-.col-1{
+
+.col {
   height: auto;
   align-items: center;
   display: flex;
-  flex-flow: row wrap;
-  justify-content:space-between;
+  flex-flow: column wrap;
+  width: 100%;
 }
-img{
 
-  margin-top: 5px;
-  margin-bottom: 10px;
-
+.col > div {
+  margin-top: 18px;
 }
