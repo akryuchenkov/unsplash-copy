@@ -12,11 +12,27 @@ import { RegisterComponent } from '../../../auth/components/register/register.co
 })
 export class PageComponent implements OnInit {
   currentTopic = '';
-  constructor(private activatedRoute: ActivatedRoute) {}
+
+  description = '';
+  title = '';
+  constructor(
+    private unsplashService: UnsplashService,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(({ topic }) => {
+    this.activatedRoute.params.subscribe(({ topic, description, title }) => {
       this.currentTopic = topic;
+      this.fetch();
     });
+  }
+
+  fetch() {
+    this.unsplashService
+      .getTopicBySlug(this.currentTopic)
+      .subscribe((topic: any) => {
+        this.description = topic.description;
+        this.title = topic.title;
+      });
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UnsplashService} from '../../../shared/unsplash.service';
 
 @Component({
   selector: 'app-register',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor() { }
-  firstname: string;
+  photo;
+  constructor(private unsplashService: UnsplashService) {
+    this.unsplashService.getRandomPhoto().subscribe(topics => {
+      this.photo = topics;
+    });
+  }
   ngOnInit(): void {
   }
 
