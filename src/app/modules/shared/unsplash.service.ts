@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import {filter, map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 
 let accessKey: string;
@@ -73,13 +74,15 @@ export class UnsplashService {
       getUnsplashAuthConfig());
   }
 
-  getValue(): string
-  {
-    return this.value;
-  }
 
-  setValue(value: string): void
+}
+
+function getValue(): string
+{
+  return this.value;
+}
+
+function setValue(value: string): void
   {
     this.value = value;
   }
-}

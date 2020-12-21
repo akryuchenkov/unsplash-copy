@@ -7,6 +7,7 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
 import { LoginComponent } from '../auth/components/login/login.component';
 import { RegisterComponent } from '../auth/components/register/register.component';
 import {SearchGalleryComponent} from './pages/search-gallery/search-gallery.component';
+import {SerComponent} from '../shared/components/ser/ser.component';
 
 const routes: Routes = [
   {
@@ -31,19 +32,24 @@ const routes: Routes = [
         component: RegisterComponent,
       },
       {
-        path: 'search',
+        path: 'ser',
+        component: SerComponent,
+      },
+      {
+        path: 'search/:srch',
         component: SearchGalleryComponent,
       },
       {
         path: ':topic',
         component: PageComponent,
       },
+      {
+        path: '**',
+        component: HomePageComponent,
+      },
     ],
   },
-  {
-    path: '**',
-    component: HomePageComponent,
-  },
+
 ];
 
 @NgModule({

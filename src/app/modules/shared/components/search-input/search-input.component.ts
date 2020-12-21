@@ -34,8 +34,8 @@ export class SearchInputComponent implements OnInit {
   {
 
     this.unsplashService.value = this.value;
-    // alert(this.value);
-    this.router.navigate(['/search']);
+    // alert(this.unsplashService.value);
+    this.router.navigate(['ser']);
   }
 
   ngOnInit(): void {

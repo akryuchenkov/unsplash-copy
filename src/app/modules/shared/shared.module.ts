@@ -10,6 +10,7 @@ import { SubmitComponent } from './components/submit/submit.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { SerComponent } from './components/ser/ser.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     LoComponent,
     SubmitComponent,
     GalleryComponent,
+    SerComponent,
   ],
   imports: [CommonModule, FormsModule, MatButtonModule, MatDialogModule],
   exports: [MenuComponent, SearchInputComponent, BarComponent, LoComponent, GalleryComponent],

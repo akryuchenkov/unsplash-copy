@@ -1,8 +1,8 @@
 <app-menu></app-menu>
 <div class="container">
-  {{value}}
+
   <div *ngFor="let picCol of picturesInner">
-    {{value}}
+
     <div *ngFor="let pic of picCol" class="col">
       <div>
         <img src="{{ pic.urls.small }}" />
@@ -10,3 +10,5 @@
     </div>
   </div>
 </div>
+
+<!--<app-gallery [topic]="currentTopic"></app-gallery>-->
