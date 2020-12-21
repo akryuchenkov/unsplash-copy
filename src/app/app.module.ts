@@ -6,8 +6,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SharedModule} from './modules/shared/shared.module';
 import {AuthModule} from './modules/auth/auth.module';
-import {SystemModule} from './modules/system/system.module';
-
+import { SystemModule } from './modules/system/system.module';
+import {UnsplashService} from './modules/shared/unsplash.service';
 
 
 @NgModule({
@@ -20,9 +20,9 @@ import {SystemModule} from './modules/system/system.module';
     SharedModule,
     SystemModule,
     AuthModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UnsplashService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

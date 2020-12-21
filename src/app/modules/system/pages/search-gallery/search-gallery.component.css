@@ -1,0 +1,21 @@
+
+.container {
+  margin:20px auto ;
+  justify-content: center;
+  width: 1320px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 24px;
+}
+
+.col {
+  height: auto;
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+.col > div {
+  margin-top: 18px;
+}

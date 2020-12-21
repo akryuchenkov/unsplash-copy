@@ -1,2 +1,12 @@
 <app-menu></app-menu>
-<app-gallery></app-gallery>
+<div class="container">
+  {{value}}
+  <div *ngFor="let picCol of picturesInner">
+    {{value}}
+    <div *ngFor="let pic of picCol" class="col">
+      <div>
+        <img src="{{ pic.urls.small }}" />
+      </div>
+    </div>
+  </div>
+</div>

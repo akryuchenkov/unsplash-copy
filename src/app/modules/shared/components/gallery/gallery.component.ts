@@ -11,19 +11,36 @@ export class GalleryComponent implements OnInit {
   @Input()
   topic = '';
   innerWidth = 1920;
+  topics: string[] = ['nature', 'people', 'architecture', 'current-events', 'experimental', 'fashion', 'film', 'health', 'interiors'];
 
-  pictures = [];
+  pictures: any[] = [];
   constructor(private unsplashService: UnsplashService) {
-    if (!this.topic) {
-      this.unsplashService.getListPhotos().subscribe((pictures) => {
+
+    if (this.topic === 'search')
+    {
+      this.unsplashService.getSearch(this.topic).subscribe((pictures) => {
         this.pictures = pictures;
       });
-    } else {
-      this.unsplashService
-        .getPhotosByTopic(this.topic)
-        .subscribe((pictures) => {
+    }
+    else
+    {
+      if (!this.topic)
+      {
+        alert(this.topic);
+        this.unsplashService.getListPhotos().subscribe((pictures) => {
           this.pictures = pictures;
         });
+        // this.unsplashService.getSearch(this.topic).subscribe(pictures => {
+        //   this.pictures = pictures.results;
+        // });
+      } else {
+        alert('NOT');
+        this.unsplashService
+          .getPhotosByTopic(this.topic)
+          .subscribe((pictures) => {
+            this.pictures = pictures;
+          });
+      }
     }
   }
 

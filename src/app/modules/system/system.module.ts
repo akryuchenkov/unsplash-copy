@@ -9,7 +9,8 @@ import {UserPageComponent} from './pages/user-page/user-page.component';
 import {UnsplashService} from '../shared/unsplash.service';
 import { SearchGalleryComponent } from './pages/search-gallery/search-gallery.component';
 
-@NgModule({
+@NgModule
+({
   declarations: [SystemLayoutComponent, HomePageComponent, PageComponent, UserPageComponent, SearchGalleryComponent],
   imports: [CommonModule, SystemRoutingModule, SharedModule],
   exports: [
