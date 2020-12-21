@@ -6,6 +6,7 @@ import { PageComponent } from './pages/page/page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { LoginComponent } from '../auth/components/login/login.component';
 import { RegisterComponent } from '../auth/components/register/register.component';
+import { SearchGalleryComponent } from './pages/search-gallery/search-gallery.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'join',
         component: RegisterComponent,
+      },
+      {
+        path: 'search',
+        component: SearchGalleryComponent,
       },
     ],
   },

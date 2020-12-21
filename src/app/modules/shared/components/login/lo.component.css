@@ -4,14 +4,14 @@
   height: 32px;
   float: right;
   padding: 0 11px;
-  width:660px;
+  width:675px;
 }
 .right{
   float:right;
-  margin-right: -50px;
+
 }
 .button-1{
-  margin-right: 14px;
+padding:0 ;
   display: inline-block;
   border: 1px solid transparent;
   transition: all .1s ease-in-out;
@@ -31,7 +31,7 @@
 .green-but{
   color: #fff;
   background-color: #3cb46e;
-
+margin-left: 12px;
   height: 32px;
   padding: 0 11px;
   font-size: 14px;
@@ -69,7 +69,7 @@ button:hover{
   color: #111;
 }
 .over-but, .over-log{
-  margin-right: 48px;
+  margin-right: 40px;
   float:left;
   display: inline-block;
 }
