@@ -37,6 +37,7 @@ export class SearchGalleryComponent implements OnInit {
       //this.value = this.unsplashService.value;
       // this.value = 'kek';
       this.unsplashService.getSearch(this.value).subscribe(pictures => {
+        // @ts-ignore
         this.pictures = pictures.results;
       });
     }
