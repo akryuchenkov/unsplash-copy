@@ -16,7 +16,8 @@ import { SearchGalleryComponent } from './pages/search-gallery/search-gallery.co
   exports: [
     HomePageComponent,
     PageComponent,
-    UserPageComponent
+    UserPageComponent,
+    SearchGalleryComponent
   ],
   providers: [UnsplashService]
 })

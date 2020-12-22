@@ -6,7 +6,6 @@ import {FormsModule} from '@angular/forms';
 import {BarComponent} from './components/bar/bar.component';
 import {LoComponent} from './components/login/lo.component';
 import {UnsplashService} from './unsplash.service';
-import { SubmitComponent } from './components/submit/submit.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -18,7 +17,6 @@ import { SerComponent } from './components/ser/ser.component';
     SearchInputComponent,
     BarComponent,
     LoComponent,
-    SubmitComponent,
     GalleryComponent,
     SerComponent,
   ],

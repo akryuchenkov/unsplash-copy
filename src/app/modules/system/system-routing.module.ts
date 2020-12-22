@@ -12,13 +12,11 @@ import {SerComponent} from '../shared/components/ser/ser.component';
 const routes: Routes = [
   {
     path: '',
-    component: SystemLayoutComponent,
     children: [
       {
         path: '',
         component: HomePageComponent,
       },
-
       {
         path: 'user',
         component: UserPageComponent,
@@ -49,7 +47,6 @@ const routes: Routes = [
       },
     ],
   },
-
 ];
 
 @NgModule({

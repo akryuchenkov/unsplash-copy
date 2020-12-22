@@ -37,3 +37,7 @@
   height: 32px;
   float: right;
 }
+a{
+  height: 32px;
+  cursor:pointer;
+}

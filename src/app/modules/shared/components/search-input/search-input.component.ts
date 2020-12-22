@@ -14,14 +14,15 @@ export class SearchInputComponent implements OnInit {
   @Output()
   update = new EventEmitter<string>();
 
-  constructor(private unsplashService: UnsplashService,
-              private router: Router) {
+  constructor(private unsplashService: UnsplashService, private router: Router) {
   }
-
+  onClick(): void
+  {
+    this.unsplashService.value = this.value;
+    this.router.navigate(['ser']);
+  }
   onChangeInput(e): void {
     this.value = e.target.value;
-    // this.update.emit(this.value);
-    // this.unsplashService.setValue(this.value);
     this.unsplashService.value = this.value;
   }
   onFocusIn(): void {
@@ -30,13 +31,7 @@ export class SearchInputComponent implements OnInit {
   onFocusOut(): void {
     this.isFocus = false;
   }
-  onClick(): void
-  {
 
-    this.unsplashService.value = this.value;
-    // alert(this.unsplashService.value);
-    this.router.navigate(['ser']);
-  }
 
   ngOnInit(): void {
   }

@@ -25,29 +25,26 @@ export class UnsplashService {
   value = '';
 
   getTopics(): Observable<any[]> {
-    // alert('wat');
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/topics`,
       getUnsplashAuthConfig()
     );
   }
   getPhotosByTopic(topicName: string): Observable<any[]> {
-    // alert('wat');
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/topics/${topicName}/photos?per_page=30`,
       getUnsplashAuthConfig()
     );
   }
-
   getPhotosByUsername(username: string): Observable<any[]> {
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/users/${username}/photos`,
       getUnsplashAuthConfig()
     );
   }
-
   getRandomPhoto(): Observable<any[]> {
-    return this.httpClient.get<any[]>(`https://api.unsplash.com/photos/random`);
+    return this.httpClient.get<any[]>(`https://api.unsplash.com/photos/random`,
+    getUnsplashAuthConfig());
   }
   getListPhotos(): Observable<any[]> {
     // alert('wat');
@@ -62,13 +59,6 @@ export class UnsplashService {
     return this.httpClient.post(`https://unsplash.com/oauth/authorize?client_id=${accessKey}`,
       getUnsplashAuthConfig());
   }
-
-  // getSearch(requst: string): Observable<any[]>{
-  //   alert('wat');
-  //   return this.httpClient.get<any[]>(`https://api.unsplash.com/search/collections?page=30&query=${requst}`,
-  //     getUnsplashAuthConfig());
-  // }
-
   getSearch(requst: string): Observable<any[]> {
     return this.httpClient.get<any[]>(`https://api.unsplash.com/search/photos?query=${requst}&per_page=30`,
       getUnsplashAuthConfig());
@@ -77,12 +67,3 @@ export class UnsplashService {
 
 }
 
-function getValue(): string
-{
-  return this.value;
-}
-
-function setValue(value: string): void
-  {
-    this.value = value;
-  }
