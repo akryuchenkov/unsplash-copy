@@ -5,13 +5,23 @@ import { Injectable } from '@angular/core';
 
 let accessKey: string;
 accessKey = 'KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg';
-
+let secretKey: string;
+secretKey = 'qCV8JebAVFLbTgW8xYzLXbdpC-N5UG39bnFRXGr5A_Y';
 
 // tslint:disable-next-line:typedef
 function getUnsplashAuthConfig() {
   return {
     headers: {
       Authorization: `Client-ID ${accessKey}`,
+    },
+  };
+}
+function getUnsplashAuth() {
+  return {
+    headers: {
+      Authorization: `Client-ID ${accessKey}`,
+      Redirect_to: `redirect_uri=/login`,
+
     },
   };
 }
@@ -56,7 +66,7 @@ export class UnsplashService {
     getUnsplashAuthConfig());
   }
   toLogin(): Observable<any>{
-    return this.httpClient.post(`https://unsplash.com/oauth/authorize?client_id=${accessKey}`,
+    return this.httpClient.post(`https://unsplash.com/oauth/authorize?client_id=${accessKey}&redirect_uri=/login&response_type=code`,
       getUnsplashAuthConfig());
   }
   getSearch(requst: string): Observable<any[]> {

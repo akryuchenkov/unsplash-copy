@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UnsplashService} from '../../../shared/unsplash.service';
 
 
 @Component({
@@ -8,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private unsplashService: UnsplashService) {
+    this.unsplashService.toLogin().subscribe();
+  }
 
-  async ngOnInit(): Promise<void> {
+  ngOnInit() {
     // const response = fetch('https://www.biletik.aero/upload/medialibrary/807/807f262b60da392f1e09aa6d33f20a9b.png');
     // if (response.finally()) {
     //   const json = (await response).json();
