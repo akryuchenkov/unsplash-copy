@@ -8,16 +8,18 @@ import {PageComponent} from './pages/page/page.component';
 import {UserPageComponent} from './pages/user-page/user-page.component';
 import {UnsplashService} from '../shared/unsplash.service';
 import { SearchGalleryComponent } from './pages/search-gallery/search-gallery.component';
+import { SubmitComponent } from './pages/submit/submit.component';
 
 @NgModule
 ({
-  declarations: [SystemLayoutComponent, HomePageComponent, PageComponent, UserPageComponent, SearchGalleryComponent],
+  declarations: [SystemLayoutComponent, HomePageComponent, PageComponent, UserPageComponent, SearchGalleryComponent, SubmitComponent],
   imports: [CommonModule, SystemRoutingModule, SharedModule],
   exports: [
     HomePageComponent,
     PageComponent,
     UserPageComponent,
-    SearchGalleryComponent
+    SearchGalleryComponent,
+    SubmitComponent
   ],
   providers: [UnsplashService]
 })

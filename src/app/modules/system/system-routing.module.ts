@@ -8,6 +8,7 @@ import { LoginComponent } from '../auth/components/login/login.component';
 import { RegisterComponent } from '../auth/components/register/register.component';
 import {SearchGalleryComponent} from './pages/search-gallery/search-gallery.component';
 import {SerComponent} from '../shared/components/ser/ser.component';
+import {SubmitComponent} from './pages/submit/submit.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: 'join',
         component: RegisterComponent,
+      },
+      {
+        path: 'submit',
+        component: SubmitComponent,
       },
       {
         path: 'ser',

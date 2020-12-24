@@ -12,6 +12,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { SerComponent } from './components/ser/ser.component';
 import {RouterModule} from '@angular/router';
 
+// @ts-ignore
 @NgModule({
   declarations: [
     MenuComponent,
@@ -22,7 +23,7 @@ import {RouterModule} from '@angular/router';
     SerComponent,
   ],
     imports: [CommonModule, FormsModule, MatButtonModule, MatDialogModule, RouterModule],
-  exports: [MenuComponent, SearchInputComponent, BarComponent, LoComponent, GalleryComponent],
-  providers: [UnsplashService]
+  exports: [MenuComponent, SearchInputComponent, BarComponent, LoComponent, GalleryComponent, SerComponent],
+  providers: [UnsplashService],
 })
 export class SharedModule {}

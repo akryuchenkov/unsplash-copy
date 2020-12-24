@@ -61,12 +61,14 @@ button{
   text-align: center;
   user-select: none;
   fill: currentColor;
-
+  outline: none;
 
 }
 button:hover{
   border-color: #111111;
   color: #111;
+  outline: none;
+  cursor: pointer;
 }
 .over-but, .over-log{
   margin-right: 40px;
@@ -78,4 +80,8 @@ button:hover{
 
 a{
   text-decoration: none;
+}
+#submitPhoto{
+  width: 90vw;
+  height: 90vh;
 }

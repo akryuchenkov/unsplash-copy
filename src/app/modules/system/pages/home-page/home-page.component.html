@@ -1,18 +1,20 @@
+<script src="../../../shared/components/menu/menu.component.ts"></script>
 <app-menu></app-menu>
 <div class="home">
+  <a class="im" href="{{picLink}}">
 <div class="_container__main">
   <div class="_container">
+
     <div class="_container__pic">
-      <picture class="_pic">
-        <source
-          media="(min-width: 1800px)"
-          srcSet="https://images.unsplash.com/photo-1606773754386-1a6fb741841a?ixid=MXwxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;dpr=1&amp;auto=format%2Ccompress&amp;fit=crop&amp;w=1999&amp;h=594 1x, https://images.unsplash.com/photo-1606773754386-1a6fb741841a?ixid=MXwxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;dpr=2&amp;auto=format%2Ccompress&amp;fit=crop&amp;w=1999&amp;h=594 2x"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1606773754386-1a6fb741841a?ixid=MXwxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format%2Ccompress&amp;fit=crop&amp;w=1000&amp;h=1000"
-        />
+
+      <picture class="_pic" >
+
+        <img src="{{ pic}}">
+
       </picture>
+
     </div>
+
     <div class="_container__text">
       <div class="_main__text">
         <div class="_text">
@@ -82,5 +84,6 @@
     </div>
   </div>
 </div>
+  </a>
 <app-gallery></app-gallery>
 </div>

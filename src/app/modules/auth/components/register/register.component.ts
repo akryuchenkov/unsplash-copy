@@ -7,7 +7,7 @@ import {UnsplashService} from '../../../shared/unsplash.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  photo;
+  photo: any;
   constructor(private unsplashService: UnsplashService) {
     this.unsplashService.getRandomPhoto().subscribe(topics => {
       this.photo = topics;

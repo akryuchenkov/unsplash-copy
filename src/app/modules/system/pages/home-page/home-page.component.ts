@@ -9,10 +9,12 @@ import {UnsplashService} from '../../../shared/unsplash.service';
 })
 export class HomePageComponent implements OnInit {
   currentTopic = '';
-  pic;
+  pic: any;
+  picLink: any;
   constructor(private unsplashService: UnsplashService, private activatedRoute: ActivatedRoute) {
     this.unsplashService.getRandomPhoto().subscribe(photo => {
-      this.pic = photo;
+      this.pic = photo.urls.regular;
+      this.picLink = photo.links.html;
     });
   }
 

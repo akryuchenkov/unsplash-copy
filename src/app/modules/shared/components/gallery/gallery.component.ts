@@ -11,7 +11,7 @@ export class GalleryComponent implements OnInit {
   @Input()
   topic = '';
   innerWidth = 1920;
-  topics: string[] = ['nature', 'people', 'architecture', 'current-events', 'experimental', 'fashion', 'film', 'health', 'interiors'];
+  // topics: string[] = ['nature', 'people', 'architecture', 'current-events', 'experimental', 'fashion', 'film', 'health', 'interiors'];
 
   pictures: any[] = [];
   constructor(private unsplashService: UnsplashService) {

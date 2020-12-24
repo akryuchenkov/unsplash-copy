@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-lo',
@@ -7,9 +6,6 @@ import {MatDialog} from '@angular/material/dialog';
   styleUrls: ['./lo.component.css']
 })
 export class LoComponent implements OnInit {
-
-  constructor(public dialog: MatDialog) {}
   ngOnInit(): void {
   }
-
 }
