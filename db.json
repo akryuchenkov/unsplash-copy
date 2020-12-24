@@ -5,18 +5,55 @@
       "lastname": "fukingslave",
       "email": "fuck@you",
       "username": "Sla@ve",
-      "password": "123456"
+      "password": "123456",
+      "id": 1
     },
     {
       "name": "1",
       "lastname": "1",
-      "email": "1",
+      "email": "1@1",
       "username": "1",
-      "password": "1"
+      "password": "1",
+      "id": 2
+    },
+    {
+      "name": "ddd",
+      "lastname": "dddd",
+      "email": "d@d",
+      "username": "dddddd",
+      "password": "dddddddddddddddddddddddddddddd",
+      "id": 3
+    },
+    {
+      "name": "asd",
+      "lastname": "asd",
+      "email": "asd@ad",
+      "username": "adsadadasd",
+      "password": "asdawdasdwad",
+      "id": 4
+    },
+    {
+      "name": "виноград",
+      "lastname": "да",
+      "email": "на бабках@я их возилin",
+      "username": "70",
+      "password": "100500",
+      "id": 5
+    },
+    {
+      "name": "бубылда",
+      "lastname": "бубылдабубылдабубылдабубылдавезде",
+      "email": "ахахах@собака-псина",
+      "username": "писна",
+      "password": "min. 6 char",
+      "id": 6
     }
-
   ],
   "photos": [
-    {"id": 1, "title": "Travel", "category" : 3}
+    {
+      "id": 1,
+      "title": "Travel",
+      "category": 3
+    }
   ]
 }

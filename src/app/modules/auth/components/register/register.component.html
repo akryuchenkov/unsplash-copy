@@ -19,7 +19,7 @@
             else</h2>
         </div>
       </div> <!-- .content -->
-      <div class="_black"> <img src="{{photo.urls.raw}}"></div>
+      <div class="_black"></div>
     </div>
   </div><!-- close .left-panel -->
 
@@ -32,22 +32,29 @@
 
             <h4>Join Unsplash</h4>
 
-            <p>Already have an account? <a href="/login" rel="nofollow">Login</a></p>
+            <p>Already have an account? <a routerLink="/login" rel="nofollow">Login</a></p>
           </div>
           <div class="form">
             <div class="_col">
-              <form
-                method="post">
+              <form>
                 <input name="utf8" type="hidden" value="&#x2713;"/>
                 <input name="authenticity_token" type="hidden"
                        value="TvHZWzGhmazwE+OUhKY6y2K9It8yn/nny3pInd+pROcTVM4YkpkyuOGrLJuNREbH5Lbzkuiq7Ov+rO84/luq2g=="/>
                 <div class="form-group">
                   <label for="user_first_name">First name</label>
-                  <input name="user[first_name]" required="required" type="text"/>
+                  <input name="user[first_name]" required="required" type="text"
+                         (input)="onChangeInputFirst($event)"
+                         [value]="firstname"
+                         (focusin)="onFocusInFirst()"
+                         (focusout)="onFocusOutFirst()"/>
                 </div> <!-- close .form-group -->
                 <div class="form-group">
                   <label for="user_last_name">Last name</label>
-                  <input id="user_last_name" name="user[last_name]" type="text"/>
+                  <input id="user_last_name" name="user[last_name]" type="text"
+                         (input)="onChangeInputLast($event)"
+                         [value]="lastname"
+                         (focusin)="onFocusInLast()"
+                         (focusout)="onFocusOutLast()"/>
 
                 </div> <!-- close .form-group -->
 
@@ -58,7 +65,11 @@
                   </label>
                   <input class="form-control js-validate-field-on-blur" id="user_email" name="user[email]"
                          required="required"
-                         type="email" value=""/>
+                         type="email" value=""
+                         (input)="onChangeInputMail($event)"
+                         [value]="email"
+                         (focusin)="onFocusInMail()"
+                         (focusout)="onFocusOutMail()"/>
 
                 </div> <!-- close .form-group -->
 
@@ -68,14 +79,22 @@
                   </label>
                   <input class="form-control js-validate-field-on-blur" id="user_username"
                          name="user[username]" pattern="[a-zA-Z0-9_]*[a-zA-Z][a-zA-Z0-9_]*" required="required"
-                         type="text"/>
+                         type="text"
+                         (input)="onChangeInputName($event)"
+                         [value]="username"
+                         (focusin)="onFocusInName()"
+                         (focusout)="onFocusOutName()"/>
                 </div> <!-- close .form-group -->
                 <div class="form-group">
                   <label for="user_password">
                     Password <span class="text-secondary">(min. 6 char)</span>
                   </label>
                   <input autocomplete="off" class="form-control js-validate-field-on-blur" id="user_password"
-                         minlength="6" name="user[password]" required="required" type="password"/>
+                         minlength="6" name="user[password]" required="required" type="password"
+                         (input)="onChangeInputPassword($event)"
+                         [value]="password"
+                         (focusin)="onFocusInPassword()"
+                         (focusout)="onFocusOutPassword()"/>
 
                 </div> <!-- close .form-group -->
 
@@ -86,15 +105,16 @@
                        name="after_authorization_object_id"
                        type="hidden"/>
 
-                <div class="form-group">
 
-                  <script async defer src="https://www.google.com/recaptcha/api.js"></script>
-                  <button class="g-recaptcha hide js-join-form-submit-button" data-callback="invisibleRecaptchaSubmit"
-                          data-sitekey="6Lf3Om8UAAAAADFWLvq5hvCv2gGk-QQ2E441cMZ0" type="submit">
-                    Join
-                  </button>
-                </div> <!-- close .form-group -->
               </form>
+              <div class="form-group">
+
+                <script async defer src="https://www.google.com/recaptcha/api.js"></script>
+                <button class="g-recaptcha hide js-join-form-submit-button" data-callback="invisibleRecaptchaSubmit"
+                        data-sitekey="6Lf3Om8UAAAAADFWLvq5hvCv2gGk-QQ2E441cMZ0" routerLink="/user" (click)="onClick()">
+                  Join
+                </button>
+              </div> <!-- close .form-group -->
             </div>
           </div> <!-- close .form -->
         </div> <!-- close .col -->

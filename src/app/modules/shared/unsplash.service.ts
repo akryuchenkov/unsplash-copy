@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
-import {filter, map} from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
+import {User} from '../system/user';
 
 let accessKey: string;
 accessKey = 'KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg';
@@ -23,8 +23,8 @@ function getUnsplashAuthConfig() {
 function getImagifyAuthConfig() {
   return {
     headers: {
-      Authorization: `Client-ID ${accessKey}`,
-      Content_Type: `multipart/form-data`
+      Authorization: '13dcb72bd1cf222ae572eb6faac3f6d310bb8826',
+      'Content-Type': 'multipart/form-data'
     },
   };
 }
@@ -40,6 +40,7 @@ export class UnsplashService {
   value = '';
   LoginEmail = '';
   LoginPassword = '';
+
 
   Name = '';
 
@@ -93,6 +94,11 @@ export class UnsplashService {
   postPhoto(img: any): Observable<any>{
     return this.httpClient.post<any>(`https://app.imagify.io/api/upload/`,
       getImagifyAuthConfig(), img);
+  }
+
+  // tslint:disable-next-line:typedef
+  createUser(user: User){
+    return this.httpClient.post('http://localhost:3000/users', user);
   }
 }
 

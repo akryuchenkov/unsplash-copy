@@ -20,44 +20,40 @@ export class LoginComponent implements OnInit {
 
   constructor(private unsplashService: UnsplashService,
               private  router: Router) {
-    //this.unsplashService.toLogin().subscribe();
+
   }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
-    // const response = fetch('https://www.biletik.aero/upload/medialibrary/807/807f262b60da392f1e09aa6d33f20a9b.png');
-    // if (response.finally()) {
-    //   const json = (await response).json();
-    // }
-    // fetch('https://api.unsplash.com/photos/?client_id=KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg&query=london')
-    //   // tslint:disable-next-line:only-arrow-functions typedef
-    //   .then(function(response){
-    //     return response.json();
-    //   })
-    //   // tslint:disable-next-line:only-arrow-functions typedef
-    //   .then(function(data)
-    //   {
-    //     console.log('data', data);
-    //   })
-    //   // tslint:disable-next-line:only-arrow-functions typedef
-    //   .then(function(data: string) {
-    //     const json = JSON.parse(data);
-    //   });
 
   }
 
   onClick(): void
   {
-    // this.unsplashService.value = this.email;
-    // this.router.navigate(['ser']);
 
 
-    if (this.password != '' && this.email != '')
+
+    if (this.password !== '' && this.email !== '')
     {
-      alert('fuck');
-      this.unsplashService.LoginEmail = this.email;
-      this.unsplashService.LoginPassword = this.password;
-      login(this.email, this.password, this.unsplashService);
-      this.router.navigate(['user']);
+      this.unsplashService.getJsonUsers().subscribe((answer) => {
+        let data;
+        data = answer; console.log(data);
+        let i: number;
+        for (i = 0; i < answer.length; i++)
+        {
+          console.log(answer[i].email);
+          console.log(answer[i].password);
+          if (this.email === answer[i].email && this.password === answer[i].password)
+          {
+            this.unsplashService.Name = answer[i].username;
+            //  alert('Ты вошёл под именем МАкс');
+            this.unsplashService.LoginEmail = this.email;
+            this.unsplashService.LoginPassword = this.password;
+            this.router.navigate(['user']);
+            break;
+          }
+        }
+      });
     }
     else
     {
@@ -85,35 +81,4 @@ export class LoginComponent implements OnInit {
   onFocusOut1(): void {
     this.isFocus = false;
   }
-
-  ff(): boolean
-  {
-    if (this.password != '' || this.email != '')
-    {
-      return true;
-    }
-    else {
-      alert('ЫЫЫ ты GanDone');
-      return false;
-    }
-  }
-
-
-}
-
-function login(mail: string, pass: string, uns: UnsplashService) {
-  uns.getJsonUsers().subscribe((answer) => {
-    let data;
-    data = answer; console.log(data);
-    let i: number;
-    for (i = 1; i < answer.length; i++)
-    {
-      if (mail === answer[i].email && pass === answer[i].password)
-      {
-        uns.Name = answer[i].username;
-        alert('Ты вошёл под именем МАкс');
-      }
-    }
-
-  });
 }
