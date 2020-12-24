@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {UnsplashService} from '../../../shared/unsplash.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -9,8 +10,17 @@ import {UnsplashService} from '../../../shared/unsplash.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private unsplashService: UnsplashService) {
-    this.unsplashService.toLogin().subscribe();
+  @Input()
+  email = '';
+  isFocus = false;
+  @Input()
+  password = '';
+
+  data: any[];
+
+  constructor(private unsplashService: UnsplashService,
+              private  router: Router) {
+    //this.unsplashService.toLogin().subscribe();
   }
 
   ngOnInit() {
@@ -35,4 +45,75 @@ export class LoginComponent implements OnInit {
 
   }
 
+  onClick(): void
+  {
+    // this.unsplashService.value = this.email;
+    // this.router.navigate(['ser']);
+
+
+    if (this.password != '' && this.email != '')
+    {
+      alert('fuck');
+      this.unsplashService.LoginEmail = this.email;
+      this.unsplashService.LoginPassword = this.password;
+      login(this.email, this.password, this.unsplashService);
+      this.router.navigate(['user']);
+    }
+    else
+    {
+      alert('Error');
+    }
+  }
+  onChangeInput(e): void {
+    this.password = e.target.value;
+    this.unsplashService.value = this.password;
+  }
+  onFocusIn(): void {
+    this.isFocus = true;
+  }
+  onFocusOut(): void {
+    this.isFocus = false;
+  }
+
+  onChangeInput1(e): void {
+    this.email = e.target.value;
+    this.unsplashService.value = this.email;
+  }
+  onFocusIn1(): void {
+    this.isFocus = true;
+  }
+  onFocusOut1(): void {
+    this.isFocus = false;
+  }
+
+  ff(): boolean
+  {
+    if (this.password != '' || this.email != '')
+    {
+      return true;
+    }
+    else {
+      alert('ЫЫЫ ты GanDone');
+      return false;
+    }
+  }
+
+
+}
+
+function login(mail: string, pass: string, uns: UnsplashService) {
+  uns.getJsonUsers().subscribe((answer) => {
+    let data;
+    data = answer; console.log(data);
+    let i: number;
+    for (i = 1; i < answer.length; i++)
+    {
+      if (mail === answer[i].email && pass === answer[i].password)
+      {
+        uns.Name = answer[i].username;
+        alert('Ты вошёл под именем МАкс');
+      }
+    }
+
+  });
 }

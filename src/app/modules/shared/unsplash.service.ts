@@ -30,9 +30,14 @@ function getUnsplashAuth() {
   providedIn: 'root',
 })
 export class UnsplashService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {
+  }
 
   value = '';
+  LoginEmail = '';
+  LoginPassword = '';
+
+  Name = '';
 
   getTopics(): Observable<any[]> {
     return this.httpClient.get<any[]>(
@@ -40,38 +45,50 @@ export class UnsplashService {
       getUnsplashAuthConfig()
     );
   }
+
   getPhotosByTopic(topicName: string): Observable<any[]> {
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/topics/${topicName}/photos?per_page=30`,
       getUnsplashAuthConfig()
     );
   }
+
   getPhotosByUsername(username: string): Observable<any[]> {
     return this.httpClient.get<any[]>(
       `https://api.unsplash.com/users/${username}/photos`,
       getUnsplashAuthConfig()
     );
   }
+
   getRandomPhoto(): Observable<any[]> {
     return this.httpClient.get<any[]>(`https://api.unsplash.com/photos/random`,
-    getUnsplashAuthConfig());
+      getUnsplashAuthConfig());
   }
+
   getListPhotos(): Observable<any[]> {
     // alert('wat');
     return this.httpClient.get<any[]>(`https://api.unsplash.com/photos?per_page=30`,
       getUnsplashAuthConfig());
   }
+
   getTopicBySlug(topicName: string): Observable<any[]> {
-  return this.httpClient.get<any[]>(`https://api.unsplash.com/topics/${topicName}`,
-    getUnsplashAuthConfig());
-  }
-  toLogin(): Observable<any>{
-    return this.httpClient.post(`https://unsplash.com/oauth/authorize?client_id=${accessKey}&redirect_uri=/login&response_type=code`,
+    return this.httpClient.get<any[]>(`https://api.unsplash.com/topics/${topicName}`,
       getUnsplashAuthConfig());
   }
+
+  toLogin(): Observable<any> {
+    return this.httpClient.post(`https://unsplash.com/oauth/authorize?client_id=${accessKey}&redirect_uri=localhost:4200/login&response_type=code&scope=read_user`,
+      getUnsplashAuth());
+  }
+
   getSearch(requst: string): Observable<any[]> {
     return this.httpClient.get<any[]>(`https://api.unsplash.com/search/photos?query=${requst}&per_page=30`,
       getUnsplashAuthConfig());
+  }
+
+  getJsonUsers(): Observable<any[]>
+  {
+    return  this.httpClient.get<any[]>(`http://localhost:3000/users`);
   }
 
 

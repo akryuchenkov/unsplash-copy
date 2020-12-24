@@ -14,7 +14,7 @@
 
 
           <div class="form-group">
-            <form accept-charset="UTF-8" action="/login" method="post">
+            <form accept-charset="UTF-8"  >
               <input class="in" name="utf8" type="hidden" value="&#x2713;"/><input
               name="authenticity_token" type="hidden"/>
 
@@ -22,6 +22,10 @@
                 <label for="user_email">Email</label>
                 <input class ="in" autofocus="autofocus" id="user_email" name="user[email]" tabindex="1"
                        type="email"
+                       (input)="onChangeInput1($event)"
+                       [value]="email"
+                       (focusin)="onFocusIn1()"
+                       (focusout)="onFocusOut1()"
                        value=""/>
               </div> <!-- close .form-group -->
 
@@ -32,7 +36,10 @@
                   </label> <span class="forgot"><a href="/users/password/new" tabindex="4">Forgot your password?</a></span>
                 </div>
 
-                <input autocomplete="off" class ="in"  id="user_password" name="user[password]" tabindex="2"
+                <input autocomplete="off" class ="in" (input)="onChangeInput($event)"
+                       [value]="password"
+                       (focusin)="onFocusIn()"
+                       (focusout)="onFocusOut()" id="user_password" name="user[password]" tabindex="2"
                        type="password"/>
               </div> <!-- close .form-group -->
 
@@ -46,11 +53,13 @@
               <div class="form-group">
                 <button data-disable-with="···" name="commit" tabindex="3"
                        type="submit"
-                       value="Login">Login</button>
+                        (click)="onClick()"
+                       value="Login" routerLink="join">Login</button>
+                <a href="https://unsplash.com/oauth/authorize?client_id=KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg&redirect_uri=localhost:4200&response_type=code&scope=read_user">link</a>
               </div> <!-- close .form-group -->
             </form>
             <div class="login__alt-cta text-center">
-              Don't have an account? <a href="/join">Join</a>
+              Don't have an account? <a routerLink="/join">Join</a>
             </div> <!-- close .text-center -->
 
           </div> <!-- close .col -->
