@@ -35,6 +35,7 @@ function getImagifyAuthConfig() {
 })
 export class UnsplashService {
   constructor(private httpClient: HttpClient) {
+    alert('И снова седая ночь');
   }
 
   value = '';

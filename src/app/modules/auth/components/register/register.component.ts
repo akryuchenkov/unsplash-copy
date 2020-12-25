@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UnsplashService} from '../../../shared/unsplash.service';
 import {Router} from '@angular/router';
 import {User} from '../../../system/user';
+import {global} from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-register',
@@ -16,6 +17,7 @@ export class RegisterComponent implements OnInit {
   username = '';
   password = '';
   isFocus = false;
+  private flag: boolean;
   constructor(private unsplashService: UnsplashService,
               private router: Router) {
     this.unsplashService.getRandomPhoto().subscribe(topics => {
@@ -28,13 +30,51 @@ export class RegisterComponent implements OnInit {
   // tslint:disable-next-line:typedef
   onClick() {
 
-    const user: User = new User(this.firstname, this.lastname, this.email, this.username, this.password);
-    this.unsplashService.createUser(user).subscribe(() =>
+    if (this.firstname !== '' || this.lastname !== '' || this.email !== '' || this.username !== '' || this.password !== '')
     {
-      alert('Успешно');
-      this.router.navigate(['/user']);
-    });
-    this.unsplashService.Name = this.username;
+      const user: User = new User(this.firstname, this.lastname, this.email, this.username, this.password);
+      this.flag = true;
+      this.unsplashService.getJsonUsers().subscribe((answer) => {
+        // let data;
+        // data = answer; console.log(data);
+        let i: number;
+        for (i = 0; i < answer.length; i++)
+        {
+          // console.log(answer[i].email);
+          // console.log(answer[i].password);
+          if (this.email === answer[i].email || this.username === answer[i].username)
+          {
+            // alert('agas');
+            this.flag = false;
+            // this.unsplashService.Name = answer[i].username;
+            // //  alert('Ты вошёл под именем МАкс');
+            // this.unsplashService.LoginEmail = this.email;
+            // this.unsplashService.LoginPassword = this.password;
+            // this.router.navigate(['user']);
+            break;
+          }
+        }
+        if (this.flag)
+        {
+          this.unsplashService.createUser(user).subscribe(() =>
+          {
+            alert('Успешно');
+            this.router.navigate(['/user']);
+          });
+          this.unsplashService.Name = this.username;
+        }
+        else
+        {
+          alert('Аккаунт с данным именем или почтой уже существует');
+        }
+      });
+    }
+    else
+    {
+      alert('Invalid data');
+    }
+
+
   }
 
 

@@ -36,13 +36,13 @@ export class LoginComponent implements OnInit {
     if (this.password !== '' && this.email !== '')
     {
       this.unsplashService.getJsonUsers().subscribe((answer) => {
-        let data;
-        data = answer; console.log(data);
+        // let data;
+        // data = answer; console.log(data);
         let i: number;
         for (i = 0; i < answer.length; i++)
         {
-          console.log(answer[i].email);
-          console.log(answer[i].password);
+          // console.log(answer[i].email);
+          // console.log(answer[i].password);
           if (this.email === answer[i].email && this.password === answer[i].password)
           {
             this.unsplashService.Name = answer[i].username;

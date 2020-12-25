@@ -10,7 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 export class UserPageComponent implements OnInit {
   name: string;
   constructor(private  unsplashService: UnsplashService) {
-    //alert(this.unsplashService.Name);
+    // alert(this.unsplashService.Name);
     this.name = this.unsplashService.Name;
   }
 
