@@ -58,3 +58,13 @@ a:hover{
 a {
   text-decoration: none;
 }
+.user{
+  display: flex;
+
+  text-align: center;
+}
+.user a{
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

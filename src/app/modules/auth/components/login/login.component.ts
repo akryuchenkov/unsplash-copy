@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   @Input()
@@ -46,7 +47,6 @@ export class LoginComponent implements OnInit {
           if (this.email === answer[i].email && this.password === answer[i].password)
           {
             this.unsplashService.Name = answer[i].username;
-            //  alert('Ты вошёл под именем МАкс');
             this.unsplashService.LoginEmail = this.email;
             this.unsplashService.LoginPassword = this.password;
             this.router.navigate(['user']);
@@ -70,7 +70,6 @@ export class LoginComponent implements OnInit {
   onFocusOut(): void {
     this.isFocus = false;
   }
-
   onChangeInput1(e): void {
     this.email = e.target.value;
     this.unsplashService.value = this.email;

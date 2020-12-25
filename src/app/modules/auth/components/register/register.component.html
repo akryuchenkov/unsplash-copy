@@ -32,7 +32,7 @@
 
             <h4>Join Unsplash</h4>
 
-            <p>Already have an account? <a routerLink="/login" rel="nofollow">Login</a></p>
+            <p>Already have an account? <a href="/login" rel="nofollow">Login</a></p>
           </div>
           <div class="form">
             <div class="_col">
@@ -108,10 +108,7 @@
 
               </form>
               <div class="form-group">
-
-                <script async defer src="https://www.google.com/recaptcha/api.js"></script>
-                <button class="g-recaptcha hide js-join-form-submit-button" data-callback="invisibleRecaptchaSubmit"
-                        data-sitekey="6Lf3Om8UAAAAADFWLvq5hvCv2gGk-QQ2E441cMZ0" routerLink="/user" (click)="onClick()">
+                <button routerLink="/user" (click)="onClick()">
                   Join
                 </button>
               </div> <!-- close .form-group -->

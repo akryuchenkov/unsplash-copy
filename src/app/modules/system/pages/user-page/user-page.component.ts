@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {UnsplashService} from '../../../shared/unsplash.service';
-import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-userpage',
@@ -14,6 +13,5 @@ export class UserPageComponent implements OnInit {
     this.name = this.unsplashService.Name;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

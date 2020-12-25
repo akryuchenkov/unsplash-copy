@@ -111,6 +111,22 @@
       "username": "ddsawda",
       "password": "da",
       "id": 14
+    },
+    {
+      "name": "anna",
+      "lastname": "piryakina",
+      "email": "piryakinaa@gmail.com",
+      "username": "piryakinaa",
+      "password": "qweqwe",
+      "id": 7
+    },
+    {
+      "name": "anna",
+      "lastname": "piryakina",
+      "email": "piryakinaa@gmail.com",
+      "username": "piryakinaa",
+      "password": "qweqwe",
+      "id": 8
     }
   ],
   "photos": [
