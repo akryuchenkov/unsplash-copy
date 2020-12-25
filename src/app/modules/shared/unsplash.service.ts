@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import {User} from '../system/user';
+import { User } from '../system/user';
 
 let accessKey: string;
 accessKey = 'KIKAhNUozBr8IesBioPmRElqLI3xLXOR-9bf3-PwLAg';
@@ -24,24 +24,22 @@ function getImagifyAuthConfig() {
   return {
     headers: {
       Authorization: '13dcb72bd1cf222ae572eb6faac3f6d310bb8826',
-      'Content-Type': 'multipart/form-data'
+      'Content-Type': 'multipart/form-data',
     },
   };
 }
-
 
 @Injectable({
   providedIn: 'root',
 })
 export class UnsplashService {
   constructor(private httpClient: HttpClient) {
-   // alert('И снова седая ночь');
+    // alert('И снова седая ночь');
   }
 
   value = '';
   LoginEmail = '';
   LoginPassword = '';
-
 
   Name = '';
 
@@ -67,39 +65,48 @@ export class UnsplashService {
   }
 
   getRandomPhoto(): Observable<any> {
-    return this.httpClient.get<any>(`https://api.unsplash.com/photos/random?`,
-      getUnsplashAuthConfig());
+    return this.httpClient.get<any>(
+      `https://api.unsplash.com/photos/random?`,
+      getUnsplashAuthConfig()
+    );
   }
 
   getListPhotos(): Observable<any[]> {
     // alert('wat');
-    return this.httpClient.get<any[]>(`https://api.unsplash.com/photos?per_page=30`,
-      getUnsplashAuthConfig());
+    return this.httpClient.get<any[]>(
+      `https://api.unsplash.com/photos?per_page=30`,
+      getUnsplashAuthConfig()
+    );
   }
 
   getTopicBySlug(topicName: string): Observable<any[]> {
-    return this.httpClient.get<any[]>(`https://api.unsplash.com/topics/${topicName}`,
-      getUnsplashAuthConfig());
+    return this.httpClient.get<any[]>(
+      `https://api.unsplash.com/topics/${topicName}`,
+      getUnsplashAuthConfig()
+    );
   }
 
   getSearch(requst: string): Observable<any[]> {
-    return this.httpClient.get<any[]>(`https://api.unsplash.com/search/photos?query=${requst}&per_page=30`,
-      getUnsplashAuthConfig());
+    return this.httpClient.get<any[]>(
+      `https://api.unsplash.com/search/photos?query=${requst}&per_page=30`,
+      getUnsplashAuthConfig()
+    );
   }
 
-  getJsonUsers(): Observable<any[]>
-  {
-    return  this.httpClient.get<any[]>(`http://localhost:3000/users`);
+  getJsonUsers(): Observable<any[]> {
+    return this.httpClient.get<any[]>(`http://localhost:3000/users`);
   }
 
-  postPhoto(img: any): Observable<any>{
-    return this.httpClient.post<any>(`https://app.imagify.io/api/upload/`,
-      getImagifyAuthConfig(), img);
+  postPhoto(img: any): Observable<any> {
+    return this.httpClient.post<any>(
+      `https://app.imagify.io/api/upload/`,
+      getImagifyAuthConfig(),
+      img
+    );
   }
 
   // tslint:disable-next-line:typedef
-  createUser(user: User){
+  createUser(user: User) {
     return this.httpClient.post('http://localhost:3000/users', user);
   }
 }
-

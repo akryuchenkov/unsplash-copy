@@ -127,6 +127,14 @@
       "username": "piryakinaa",
       "password": "qweqwe",
       "id": 8
+    },
+    {
+      "name": "Артем",
+      "lastname": "Крюченков",
+      "email": "a.kryuchenkov2@gmail.com",
+      "username": "be.free.forever",
+      "password": "e123e123",
+      "id": 15
     }
   ],
   "photos": [

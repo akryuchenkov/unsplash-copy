@@ -2,7 +2,7 @@
   <div *ngFor="let picCol of picturesInner">
     <div *ngFor="let pic of picCol" class="col">
       <div>
-        <a href="{{ pic.links.html   }}">
+        <a routerLink="{{ pic.links.html   }}">
         <img src="{{ pic.urls.small }}" />
         </a>
       </div>

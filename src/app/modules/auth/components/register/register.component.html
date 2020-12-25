@@ -1,27 +1,29 @@
 <div class="registrations__wrapper">
   <div class="registrations__container">
-
     <div class="registrations__left-panel">
-
       <div class="registrations__content">
-
-
         <div>
           <a routerLink="/">
-            <img class="registrations__logo"
-                 src="https://unsplash.com/assets/core/logo-white-8962708214629a3e8f9fbf5b87b70c3ace41c4175cbcc267f7fbb8449ac45bdd.svg"/>
+            <img
+              class="registrations__logo"
+              src="https://unsplash.com/assets/core/logo-white-8962708214629a3e8f9fbf5b87b70c3ace41c4175cbcc267f7fbb8449ac45bdd.svg"
+            />
           </a>
         </div>
 
         <div>
           <h1 class="registrations__title">Creation starts here</h1>
-          <h2 class="registrations__sub-title">Access 2,331,836 free, high-resolution photos you can’t find anywhere
-            else</h2>
+          <h2 class="registrations__sub-title">
+            Access 2,331,836 free, high-resolution photos you can’t find
+            anywhere else
+          </h2>
         </div>
-      </div> <!-- .content -->
+      </div>
+      <!-- .content -->
       <div class="_black"></div>
     </div>
-  </div><!-- close .left-panel -->
+  </div>
+  <!-- close .left-panel -->
 
   <div class="registrations__right-panel">
     <div class="registrations__spacer"></div>
@@ -29,95 +31,133 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="text-center">
-
             <h4>Join Unsplash</h4>
 
-            <p>Already have an account? <a href="/login" rel="nofollow">Login</a></p>
+            <p>
+              Already have an account? <a routerLink="/login" rel="nofollow">Login</a>
+            </p>
           </div>
           <div class="form">
             <div class="_col">
               <form>
-                <input name="utf8" type="hidden" value="&#x2713;"/>
-                <input name="authenticity_token" type="hidden"
-                       value="TvHZWzGhmazwE+OUhKY6y2K9It8yn/nny3pInd+pROcTVM4YkpkyuOGrLJuNREbH5Lbzkuiq7Ov+rO84/luq2g=="/>
+                <input name="utf8" type="hidden" value="&#x2713;" />
+                <input
+                  name="authenticity_token"
+                  type="hidden"
+                  value="TvHZWzGhmazwE+OUhKY6y2K9It8yn/nny3pInd+pROcTVM4YkpkyuOGrLJuNREbH5Lbzkuiq7Ov+rO84/luq2g=="
+                />
                 <div class="form-group">
                   <label for="user_first_name">First name</label>
-                  <input name="user[first_name]" required="required" type="text"
-                         (input)="onChangeInputFirst($event)"
-                         [value]="firstname"
-                         (focusin)="onFocusInFirst()"
-                         (focusout)="onFocusOutFirst()"/>
-                </div> <!-- close .form-group -->
+                  <input
+                    name="user[first_name]"
+                    required="required"
+                    type="text"
+                    (input)="onChangeInputFirst($event)"
+                    [value]="firstname"
+                    (focusin)="onFocusInFirst()"
+                    (focusout)="onFocusOutFirst()"
+                  />
+                </div>
+                <!-- close .form-group -->
                 <div class="form-group">
                   <label for="user_last_name">Last name</label>
-                  <input id="user_last_name" name="user[last_name]" type="text"
-                         (input)="onChangeInputLast($event)"
-                         [value]="lastname"
-                         (focusin)="onFocusInLast()"
-                         (focusout)="onFocusOutLast()"/>
-
-                </div> <!-- close .form-group -->
-
+                  <input
+                    id="user_last_name"
+                    name="user[last_name]"
+                    type="text"
+                    (input)="onChangeInputLast($event)"
+                    [value]="lastname"
+                    (focusin)="onFocusInLast()"
+                    (focusout)="onFocusOutLast()"
+                  />
+                </div>
+                <!-- close .form-group -->
 
                 <div class="form-group">
-                  <label for="user_email">
-                    Email address
-                  </label>
-                  <input class="form-control js-validate-field-on-blur" id="user_email" name="user[email]"
-                         required="required"
-                         type="email" value=""
-                         (input)="onChangeInputMail($event)"
-                         [value]="email"
-                         (focusin)="onFocusInMail()"
-                         (focusout)="onFocusOutMail()"/>
-
-                </div> <!-- close .form-group -->
+                  <label for="user_email"> Email address </label>
+                  <input
+                    class="form-control js-validate-field-on-blur"
+                    id="user_email"
+                    name="user[email]"
+                    required="required"
+                    type="email"
+                    value=""
+                    (input)="onChangeInputMail($event)"
+                    [value]="email"
+                    (focusin)="onFocusInMail()"
+                    (focusout)="onFocusOutMail()"
+                  />
+                </div>
+                <!-- close .form-group -->
 
                 <div class="form-group">
                   <label for="user_username">
-                    Username <span class="text-secondary">(only letters, numbers, and underscores)</span>
+                    Username
+                    <span class="text-secondary"
+                      >(only letters, numbers, and underscores)</span
+                    >
                   </label>
-                  <input class="form-control js-validate-field-on-blur" id="user_username"
-                         name="user[username]" pattern="[a-zA-Z0-9_]*[a-zA-Z][a-zA-Z0-9_]*" required="required"
-                         type="text"
-                         (input)="onChangeInputName($event)"
-                         [value]="username"
-                         (focusin)="onFocusInName()"
-                         (focusout)="onFocusOutName()"/>
-                </div> <!-- close .form-group -->
+                  <input
+                    class="form-control js-validate-field-on-blur"
+                    id="user_username"
+                    name="user[username]"
+                    pattern="[a-zA-Z0-9_]*[a-zA-Z][a-zA-Z0-9_]*"
+                    required="required"
+                    type="text"
+                    (input)="onChangeInputName($event)"
+                    [value]="username"
+                    (focusin)="onFocusInName()"
+                    (focusout)="onFocusOutName()"
+                  />
+                </div>
+                <!-- close .form-group -->
                 <div class="form-group">
                   <label for="user_password">
                     Password <span class="text-secondary">(min. 6 char)</span>
                   </label>
-                  <input autocomplete="off" class="form-control js-validate-field-on-blur" id="user_password"
-                         minlength="6" name="user[password]" required="required" type="password"
-                         (input)="onChangeInputPassword($event)"
-                         [value]="password"
-                         (focusin)="onFocusInPassword()"
-                         (focusout)="onFocusOutPassword()"/>
+                  <input
+                    autocomplete="off"
+                    class="form-control js-validate-field-on-blur"
+                    id="user_password"
+                    minlength="6"
+                    name="user[password]"
+                    required="required"
+                    type="password"
+                    (input)="onChangeInputPassword($event)"
+                    [value]="password"
+                    (focusin)="onFocusInPassword()"
+                    (focusout)="onFocusOutPassword()"
+                  />
+                </div>
+                <!-- close .form-group -->
 
-                </div> <!-- close .form-group -->
-
-                <input class="js-after-authorization-action" id="after_authorization_action"
-                       name="after_authorization_action"
-                       type="hidden"/>
-                <input class="js-after-authorization-object-id" id="after_authorization_object_id"
-                       name="after_authorization_object_id"
-                       type="hidden"/>
-
-
+                <input
+                  class="js-after-authorization-action"
+                  id="after_authorization_action"
+                  name="after_authorization_action"
+                  type="hidden"
+                />
+                <input
+                  class="js-after-authorization-object-id"
+                  id="after_authorization_object_id"
+                  name="after_authorization_object_id"
+                  type="hidden"
+                />
               </form>
               <div class="form-group">
-                <button routerLink="/user" (click)="onClick()">
-                  Join
-                </button>
-              </div> <!-- close .form-group -->
+                <button routerLink="/user" (click)="onClick()">Join</button>
+              </div>
+              <!-- close .form-group -->
             </div>
-          </div> <!-- close .form -->
-        </div> <!-- close .col -->
-      </div> <!-- close .row -->
-    </div> <!-- close .login-form -->
-    <div class=registrations__spacer></div>
-  </div> <!-- close .right-panel -->
+          </div>
+          <!-- close .form -->
+        </div>
+        <!-- close .col -->
+      </div>
+      <!-- close .row -->
+    </div>
+    <!-- close .login-form -->
+    <div class="registrations__spacer"></div>
+  </div>
+  <!-- close .right-panel -->
 </div>
-

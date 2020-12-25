@@ -1,16 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {UnsplashService} from '../../../shared/unsplash.service';
-import {Router} from '@angular/router';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { UnsplashService } from '../../../shared/unsplash.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
-
 export class LoginComponent implements OnInit {
-
   @Input()
   email = '';
   isFocus = false;
@@ -19,33 +16,27 @@ export class LoginComponent implements OnInit {
 
   data: any[];
 
-  constructor(private unsplashService: UnsplashService,
-              private  router: Router) {
-
-  }
+  constructor(
+    private unsplashService: UnsplashService,
+    private router: Router
+  ) {}
 
   // tslint:disable-next-line:typedef
-  ngOnInit() {
+  ngOnInit() {}
 
-  }
-
-  onClick(): void
-  {
-
-
-
-    if (this.password !== '' && this.email !== '')
-    {
+  onClick(): void {
+    if (this.password !== '' && this.email !== '') {
       this.unsplashService.getJsonUsers().subscribe((answer) => {
         // let data;
         // data = answer; console.log(data);
         let i: number;
-        for (i = 0; i < answer.length; i++)
-        {
+        for (i = 0; i < answer.length; i++) {
           // console.log(answer[i].email);
           // console.log(answer[i].password);
-          if (this.email === answer[i].email && this.password === answer[i].password)
-          {
+          if (
+            this.email === answer[i].email &&
+            this.password === answer[i].password
+          ) {
             this.unsplashService.Name = answer[i].username;
             this.unsplashService.LoginEmail = this.email;
             this.unsplashService.LoginPassword = this.password;
@@ -54,9 +45,7 @@ export class LoginComponent implements OnInit {
           }
         }
       });
-    }
-    else
-    {
+    } else {
       alert('Error');
     }
   }
